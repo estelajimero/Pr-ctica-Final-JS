@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="styles.css" media="screen"/>
+
+    <title>Práctica final JavaScript</title>
+</head>
+<body>
+    <main id="main-content">
+        <div id="form-wrapper">
+            <form class="dni-form" method="GET">
+                <legend class="form-title">
+                    Este formulario calculará si su letra de DNI es correcta, para ello deberá introducir nº y letra de DNI en los siguientes campos:
+                </legend>
+                <fieldset class="number-wrapper">
+                    <label class="dni-label" for="title">Número DNI (sin letra)</label><br>
+                    <input id="number-input" class="dni-input" type="text" id="dni-number" name="number" placeholder="Ej: 12345678" minlength="8" maxlength="8" required pattern="[0-9]{8}" autocomplete="off"><br><br>
+                    <input id="number-validation" class="validate-input" type="button" value="Validar">
+                </fieldset>
+                <fieldset class="letter-wrapper">
+                    <label class="dni-label" for="title">Letra DNI</label><br>
+                    <input id="letter-input" class="dni-input" type="text" id="dni-number" name="number" placeholder="Ej: Z" minlength="1" maxlength="1" required pattern="[A-Za-z]{1}" autocomplete="off"><br><br>
+                    <input id="letter-validation" class="validate-input" type="button" value="Validar">
+                </fieldset>
+                <div class="button-wrapper">
+                    <input id="check-button" class="submit-input" type="button" value="Comprobar">
+                    <input id="reset-button" class="erase-button" type="reset" value="Borrar">
+                </div>
+            </form>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
